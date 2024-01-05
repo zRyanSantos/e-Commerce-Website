@@ -1,20 +1,23 @@
-// var cm;
+var cm;
 
-// function ryanpenis(){
-//     cm = prompt('QUAL O TAMANHO DO SEU INSTRUMENTO?')
-// }
+function calcIdade(){
+    cm = prompt('Qual é a sua idade?')
+}
 
-// ryanpenis()
-// if(cm <= 5){
-//     alert('VOCE TEM PIRU PEQUENO IGUAL O VININHO DO ROLAMENTO INTENSIVO')
-// }
-// else if(cm > 5 && cm <= 20){
-//     alert('SEU PAU ESTÁ NA MÉDIA')
-// }
-// else if (cm > 20){
-//     alert('SEU PAU É GIGANTESCO IGUAL O DO RYANZITO')
-// }
-// else{
-//     alert(`Você digitou "${cm}", digite apenas numeros, não seja um neandertal!`)
-//     ryanpenis()
-// }
+calcIdade()
+if(cm < 10){
+    alert('Você ainda é bem jovem.')
+}
+else if(cm >= 10 && cm <= 14){
+    alert('Você é um pré-adolescente.')
+}
+else if (cm > 14 && cm < 18){
+    alert('Você é um adolescente.')
+}
+else if (cm >= 18){
+    alert('Você é um adulto.')
+}
+else{
+    alert(`Você digitou "${cm}". Digite apenas numeros para ter o resultado esperado!`)
+    calcIdade()
+}
