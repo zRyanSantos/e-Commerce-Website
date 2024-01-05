@@ -1,0 +1,93 @@
+.product {
+    width: 290px;
+    height: 440px;
+    margin: 25px;
+    display: inline-block;
+}
+
+.description {
+    line-height: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    color: white;
+}
+
+.old-price {
+    color: rgb(214, 214, 214);
+    text-decoration: line-through;
+    padding: 0;
+    margin: 0;
+}
+
+.new-price {
+    font-size: 22px;
+    color: #ff6500;
+    padding: 0;
+    margin: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.pay {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.buy {
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    font-weight: bold;
+    background-color: rgba(168, 83, 248, 0.61);
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    color: white;
+    background-image: url(../images/shopping-cart-1.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: calc(0% + 20px) center;
+}
+
+.buy:hover {
+    background-color: #ff6500;
+}
+
+.img-offer{
+    margin: auto;
+    padding-top: 10px;
+    max-width: 55%;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 2rem 5rem;
+    background-color: rgba(74, 51, 139, 0.2);
+}
+
+.products li {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: .8rem;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.products :hover {
+    box-shadow: 10px 0px 15px 12px rgba(55, 43, 90, 0.2);
+}
+
+.products li :hover {
+    box-shadow: none;
+}
