@@ -1,1 +1,40 @@
-/* WORK IN PROCESS */
+@media screen and (min-width: 380px) {
+    .search {
+        display: none;
+    }
+    .menu-buttons {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 576px) {
+        .products {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 1rem;
+        }
+        .products li {
+            margin: 1rem;
+        }
+        .search {
+            display: none;
+        }
+        .menu-buttons {
+            display: none;
+        }
+    }
+
+@media screen and (min-width: 992px) {
+    .products {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1rem;
+    }
+    .products li {
+        margin: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+}
