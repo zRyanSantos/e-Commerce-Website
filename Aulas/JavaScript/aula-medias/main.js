@@ -1,6 +1,6 @@
-var nomes =["Igor", "José", "Maria"];
-var notasA =[7.0, 6.5, 9.5];
-var notasB =[8.0, 7.0, 8.5];
+var nomes = ["Igor", "José", "Maria"];
+var notasA = [7.0, 6.5, 9.5];
+var notasB = [8.0, 7.0, 8.5];
 
 function media(n1, n2){
 
