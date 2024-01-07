@@ -1,1 +1,1 @@
-# Desenvolvimentos WEB & Algoritmos
+# Desenvolvimento WEB & Algoritmos
