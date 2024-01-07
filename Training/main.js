@@ -34,7 +34,7 @@ function calc() {
 
     response.innerHTML = `Vivendo em ${pais}<br>`
 
-    if (pais == 'Brasil'){
+    if (pais.toUpperCase() == 'BRASIL'){
         response.innerHTML += `Você brasileiro!`
     }
     else {
@@ -42,3 +42,4 @@ function calc() {
     }
 
 }
+
