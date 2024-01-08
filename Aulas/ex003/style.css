@@ -22,19 +22,3 @@ footer {
     text-align: center;
     font-style: italic;
 }
-
-.content {
-    text-align: center;
-    margin: 1rem;
-}
-
-.resposta {
-    text-align: center;
-}
-
-.resposta img {
-    height: 15rem;
-    width: 15rem;
-    margin: 1rem;
-    border-radius: 50%;
-}

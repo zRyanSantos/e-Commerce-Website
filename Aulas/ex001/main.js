@@ -1,4 +1,3 @@
-
 var anoNascimento = document.querySelector('input#year');
 var response = document.querySelector('div.resposta')
 var message = document.querySelector('p.dados')
