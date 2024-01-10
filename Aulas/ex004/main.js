@@ -12,7 +12,7 @@ else {
     
     var usernum = Number(verificar.value)
 
-    for ( i=1; i <= 10; i++ ) {
+    for ( i = 1; i <= 10; i++ ) {
 
         var tab = document.createElement('option')
         tab.text = (`${usernum} X ${i} = ${usernum*i}`)
