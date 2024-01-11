@@ -9,29 +9,34 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1038272728991535124/1192657509761171547/ux_1.png?ex=65a9dfdc&is=65976adc&hm=268ec4a958dd999ed22529b0e478deb7cddc92d01ada19dad403ca866d1a24be&">
 
-    <title>Exercício 004</title>
+    <title>Exercício 005</title>
 </head>
 
 <body>
 
     <header>
-        <h1>TABUADA</h1>
+        <h1>Analisador de Números</h1>
     </header>
 
     <section>
         
         <div class="content">
 
-            <p>Número: <input type="number" id="inicio"> <input type="submit" id="verify" value="Gerar Tabuada" onclick="tabuada()"></p>
+            <p>Número (entre 1 e 100): <input type="number" id="numero"> <input type="submit" id="Add" value="Adicionar" onclick="adicionar()"></p>
+
+            <select name="add" id="sel" size="6">
+
+            </select>
+
+        </div>
+
+        <div class="button">
+
+            <input type="submit" id="verify" value="Finalizar" onclick="analisar()">
 
         </div>
 
         <div class="resposta">
-
-            <select name="tabuada" id="sel" size="10">
-                <option>Digite um número acima</option>
-            </select>
-
         </div>
 
     </section>
