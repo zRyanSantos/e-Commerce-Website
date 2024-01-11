@@ -45,7 +45,7 @@ function analisar() {
 
     var soma = 0;
 
-    for (i = 0; i < lista.length; i++) {
+    for (var i in lista) {
 
         soma += lista[i];
     }
