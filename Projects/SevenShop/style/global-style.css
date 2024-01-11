@@ -76,12 +76,9 @@ body {
 }
 
 .image {
-    background-image: url(../images/dia-do-gamer.jpg);
-    background-size: cover;
-    background-position-x: center;
-    border-top-left-radius: none;
-    border-top-right-radius: none;
-    max-width: 100vw;
+    background-image: url(https://cdn.discordapp.com/attachments/1038272728991535124/1194870644412784651/Banner.png?ex=65b1ed01&is=659f7801&hm=b101d853cadb3955a30b18d11f241bec26419fe2188cde5129625abae72ddd3e&);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     height: 35rem;
 }
 
