@@ -14,11 +14,11 @@ body {
     margin: .8rem;
     border: 0.625rem solid white;
     border-radius: 2.1rem;
-    background: rgba(101,78,163,1);
+    background: linear-gradient(180deg, rgb(46 0 78) 0%, rgb(84 0 133) 100%);
 }
 
 .header {
-    height: 4.375rem;
+    height: 4.5rem;   
     border-top-left-radius: 1.25rem;
     border-top-right-radius: 1.25rem;
     display: flex;
@@ -83,15 +83,8 @@ body {
 }
 
 .content {
-    width: 100%;
-    margin: auto;
-    background-color: rgba(101,78,163,1);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    text-align: center;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 footer {
@@ -150,9 +143,9 @@ input[type=submit] {
     background-color: rgba(168, 83, 248, 0.61);
     font-weight: bold;
     background-image: url(../images/mail-send-envelope.png);
-    background-size: 20px;
+    background-size: 1.25rem;
     background-repeat: no-repeat;
-    background-position: calc(0% + 20px) center;
+    background-position: calc(0% + 1.25rem) center;
 }
 
 input[type=submit]:hover {
