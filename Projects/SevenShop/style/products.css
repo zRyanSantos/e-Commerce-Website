@@ -6,7 +6,12 @@
 }
 
 .description h4{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin-bottom: .8rem;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .old-price {
@@ -72,6 +77,7 @@
     display: grid;
     grid-template-columns: 1fr;
     list-style: none;
+    
 }
 
 .products li {
