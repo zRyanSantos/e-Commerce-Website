@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    
+
+    <!-- Links -->
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1038272728991535124/1195915630881288293/calculator.png?ex=65b5ba39&is=65a34539&hm=faaada2858d0d75a5514b8e8bebb715225f8970fc80e68a909a889345d072c65&">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Calculator</title>
+
+</head>
+
+<body>
+
+    <header></header>
+
+    <section class="container">
+
+        <ol class="inputs">
+
+            <li class="display">
+                <h1 class="numero">
+                </h1>
+            </li>
+            <li class="AC">
+                <button onclick="AC()">C</button>
+            </li>
+            <li class="sinal">
+                <button onclick="sinal()">+/-</button>
+            </li>
+            <li class="porcentagem">
+                <button onclick="porcentagem()">%</button>
+            </li>
+            <li class="divisao">
+            <button class="div" onclick="divisao()">/</button>
+            </li>
+            <li class="sete">
+                <button onclick="usernum(7)">7</button>
+            </li>
+            <li class="oito">
+                <button onclick="usernum(8)">8</button>
+            </li>
+            <li class="nove">
+                <button onclick="usernum(9)">9</button>
+            </li>
+            <li class="multiplicacao">
+                <button class="mult" onclick="multiplicacao()">x</button>
+            </li>
+            <li class="quatro">
+                <button onclick="usernum(4)">4</button>
+            </li>
+            <li class="cinco">
+                <button onclick="usernum(5)">5</button>
+            </li>
+            <li class="seis">
+                <button onclick="usernum(6)">6</button>
+            </li>
+            <li class="subtracao">
+                <button class="sub" onclick="subtracao()">-</button>
+            </li>
+            <li class="um">
+                <button onclick="usernum(1)">1</button>
+            </li>
+            <li class="dois">
+                <button onclick="usernum(2)">2</button>
+            </li>
+            <li class="tres">
+                <button onclick="usernum(3)">3</button>
+            </li>
+            <li class="adicao">
+                <button class="add" onclick="adicao()">+</button>
+            </li>
+            <li class="zero">
+                <button onclick="usernum(0)">0</button>
+            </li>
+            <li class="virgula">
+                <button onclick="virgula()">,</button>
+            </li>
+            <li class="igualdade">
+                <button onclick="igualdade(), igual()">=</button>
+            </li>
+
+        </ol>
+
+    </section>
+
+</body>
+
+    <script src="./main.js"></script>
+
+</html>
