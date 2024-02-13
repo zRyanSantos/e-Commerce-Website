@@ -2,10 +2,6 @@
     .products {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 1rem;
-    }
-    .products li {
-        margin: 1rem;
     }
 }
 
@@ -50,12 +46,14 @@
     .products {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        padding: 1rem;
     }
 }
 
 @media screen and (min-width: 1490px) {
 
+    .container {
+        margin: 1% 6rem 1rem 6rem;
+    }
     .title a{
         padding: 0.625rem;
         margin: 0 0 0 5rem;
@@ -76,9 +74,5 @@
     .products {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        padding: 1rem;
-    }
-    .products li {
-        margin: 1rem;
     }
 }

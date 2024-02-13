@@ -12,8 +12,8 @@ body {
 
 .container {
     margin: .8rem;
-    border: 0.625rem solid white;
-    border-radius: 2.1rem;
+    border: 0.4rem solid white;
+    border-radius: 2rem;
     background: linear-gradient(180deg, rgb(46 0 78) 0%, rgb(84 0 133) 100%);
 }
 
@@ -24,6 +24,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(70, 2, 119, 0.5);
+    margin: 2rem 2rem 0rem 2rem;
 }
 
 .title { 
@@ -76,10 +78,12 @@ body {
 }
 
 .image {
-    background-image: url(https://cdn.discordapp.com/attachments/1038272728991535124/1194870644412784651/Banner.png?ex=65b1ed01&is=659f7801&hm=b101d853cadb3955a30b18d11f241bec26419fe2188cde5129625abae72ddd3e&);
+    background-image: url(../images/Banner.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 35rem;
+    margin: 0rem 2rem 0rem 2rem;
+    border-radius: 0rem 0rem .5rem .5rem;
+    height: 500px;
 }
 
 .content {

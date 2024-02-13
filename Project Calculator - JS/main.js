@@ -44,13 +44,16 @@ function AC(){
 
 function usernum(n){
 
-    limit.push(n)
+    if(mydisplay != 0){
+        limit.push(n)
+    }
 
-    if (display.innerHTML === `0` || mydisplay === 0){
+    if (display.innerHTML === `0`){
         mydisplay = `${n}`
         mydisplay = Number(mydisplay)
         display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
     }
+
     else if (virgulaInserida && limit.length < 13 && !verify) {
         mydisplay += `.${n}`
         display.innerHTML += `${n}`
@@ -60,13 +63,13 @@ function usernum(n){
         mydisplay += `${n}`
         display.innerHTML += `${n}`
     }
-    else if (limit.length < 13){
+    else if (limit.length < 12){
         mydisplay += `${n}`
         mydisplay = Number(mydisplay)
         display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
     }
     else{
-        alert('Você não pode inserir números com mais de 12 casas decimais.')
+        alert('Você não pode inserir números com mais de 12 caracteres.')
     }
 
 }
