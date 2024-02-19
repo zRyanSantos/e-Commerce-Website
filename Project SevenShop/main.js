@@ -12,6 +12,3 @@ button.addEventListener("click", function(){
         container.classList = 'container'
     }
 })
-
-
-
