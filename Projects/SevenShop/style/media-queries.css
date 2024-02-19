@@ -10,9 +10,6 @@
     .container{
         margin: 2rem;
     }
-    .page{
-        margin: 1.5rem;
-    }
     .header {
         display: flex;
         align-items: center;
@@ -32,16 +29,58 @@
     }
     .menu-buttons {
         display: grid;
+        align-items: center;
+        justify-content: center;
         grid-template-columns: 1fr 1fr;
-        margin: 1rem;
         list-style: none;
         font-size: 18px;
         font-weight: bold;
     }
     .menu-buttons li {
-        padding: 0.625rem;
         display: flex;
+        padding: 0.625rem;
         flex-direction: column;
+    }
+    .theme{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+    }
+    .toggle{
+        position: absolute;
+        left: -9999px;
+    }
+    .toggle_button{
+        display: flex;
+        position: relative;
+        cursor: pointer;
+    }
+    .toggle_button::before, .toggle_button::after{
+        content: "";
+        transition: all 0.2s ease;
+    }
+    .toggle_button::before{
+        display: flex;
+        width: 2.8rem;
+        height: 1.4rem;
+        background-color: #900;
+        border-radius: 1rem;
+    }
+    .toggle_button::after{
+        position: absolute;
+        top: 0.2rem;
+        left: 0.2rem;
+        width: 1rem;
+        height: 1rem;
+        background-color: #fff;
+        border-radius: 100%;
+    }
+    .toggle:checked + .toggle_button::before{
+        background-color: green;
+    }
+    .toggle:checked + .toggle_button::after{
+        left: 1.6rem;
     }
     .products {
         display: grid;
@@ -55,21 +94,24 @@
         margin: 1% 6rem 1rem 6rem;
     }
     .title a{
-        padding: 0.625rem;
-        margin: 0 0 0 5rem;
+        padding: 0;
+        font-size: 2.8rem;
+        margin: 5rem;
     }
     .menu-buttons {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 0 5rem 0 0;
         list-style: none;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: bold;
     }
     .menu-buttons li {
         padding: 0.625rem;
         display: flex;
         flex-direction: column;
+    }
+    .theme{
+        margin: 0 5rem 0 0;
     }
     .products {
         display: grid;
