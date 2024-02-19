@@ -1,0 +1,120 @@
+@media screen and (min-width: 636px) {
+    .products {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 980px) {
+
+    .container{
+        margin: 2rem;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .title {
+        float: left;
+    }
+    .title a{
+        padding: 0.625rem;
+        margin: 1rem;
+    }
+    .search {
+        display: grid;
+        height: 2.5rem;
+        width: 35rem;
+    }
+    .menu-buttons {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .menu-buttons li {
+        display: flex;
+        padding: 0.625rem;
+        flex-direction: column;
+    }
+    .theme{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+    }
+    .toggle{
+        position: absolute;
+        left: -9999px;
+    }
+    .toggle_button{
+        display: flex;
+        position: relative;
+        cursor: pointer;
+    }
+    .toggle_button::before, .toggle_button::after{
+        content: "";
+        transition: all 0.2s ease;
+    }
+    .toggle_button::before{
+        display: flex;
+        width: 2.8rem;
+        height: 1.4rem;
+        background-color: #900;
+        border-radius: 1rem;
+    }
+    .toggle_button::after{
+        position: absolute;
+        top: 0.2rem;
+        left: 0.2rem;
+        width: 1rem;
+        height: 1rem;
+        background-color: #fff;
+        border-radius: 100%;
+    }
+    .toggle:checked + .toggle_button::before{
+        background-color: green;
+    }
+    .toggle:checked + .toggle_button::after{
+        left: 1.6rem;
+    }
+    .products {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1490px) {
+
+    .container {
+        margin: 1% 6rem 1rem 6rem;
+    }
+    .title a{
+        padding: 0;
+        font-size: 2.8rem;
+        margin: 5rem;
+    }
+    .menu-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .menu-buttons li {
+        padding: 0.625rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .theme{
+        margin: 0 5rem 0 0;
+    }
+    .products {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
