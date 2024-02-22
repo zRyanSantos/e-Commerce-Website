@@ -1,3 +1,52 @@
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+    margin: 1rem;
+}
+
+.products_whiteTheme {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+    margin: 1rem;
+}
+
+.products li {
+    background: linear-gradient(135deg, rgba(46,0,78,0.5) 50%, rgba(125,0,180,0.5) 100%);
+    display: flex;
+    flex-direction: column;
+    padding: .8rem;
+    margin: 1rem;
+    border-radius: 8px;
+    max-width: 30rem;
+}
+
+.products_whiteTheme li {
+    background: linear-gradient(135deg, rgba(0,33,94,.5) 0%, rgba(0,40,116,.5) 30%, rgba(0,49,143,.5) 50%, rgba(0,63,180,.5) 70%, rgba(0,72,204,.5) 100%);
+    display: flex;
+    flex-direction: column;
+    padding: .8rem;
+    margin: 1rem;
+    border-radius: 8px;
+}
+
+.products :hover {
+    box-shadow: 10px 0px 15px 12px rgba(55, 43, 90, 0.2);
+}
+
+.products_whiteTheme :hover {
+    box-shadow: 10px 0px 15px 12px rgba(55, 43, 90, 0.2);
+}
+
+.products li :hover {
+    box-shadow: none;
+}
+
+.products_whiteTheme li :hover {
+    box-shadow: none;
+}
+
 .description {
     line-height: 1.25rem;
     padding: .8rem;
@@ -19,9 +68,18 @@
     text-decoration: line-through;
 }
 
-.new-price {
+.products li h3 {
     font-size: 22px;
     color: rgb(0, 183, 255);
+    padding: 0;
+    margin: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.products_whiteTheme li h3 {
+    font-size: 22px;
+    color: rgb(255 155 0);
     padding: 0;
     margin: 0;
     margin-top: 2px;
@@ -34,65 +92,84 @@
     margin-bottom: 40px;
 }
 
-.buy-button {
+.products li div {
+    display: flex;
+    align-items: center;
     background: linear-gradient(135deg, rgba(46,0,78,0.5) 30%, rgba(125,0,180,0.5) 100%);
     border-radius: .5rem;
     text-align: center;
 }
 
-.buy {
+.products_whiteTheme li div {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0,33,94,.5) 0%, rgba(0,40,116,.5) 30%, rgba(0,49,143,.5) 50%, rgba(0,63,180,.5) 70%, rgba(0,72,204,.5) 100%);
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.products li button {
+    margin: auto;
+    padding: 0 1rem 0 0rem;
     font-family: Poppins, sans-serif;
     font-size: .938rem;
     height: 3.125rem; 
     font-weight: bold;
     border: none;
     background-color: transparent;
-    color: white;
 }
 
-.buy:hover {
+.products_whiteTheme li button {
+    margin: auto;
+    padding: 0 1rem 0 0rem;
+    font-family: Poppins, sans-serif;
+    font-size: .938rem;
+    height: 3.125rem; 
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+}
+
+.products li button a {
+    color: white;
+    text-decoration: none;
+}
+
+.products_whiteTheme li button a {
+    color: white;
+    text-decoration: none;
+}
+
+.icon-buy:hover {
     cursor: pointer;
 }
 
-.buy-button:hover {
+.products li div:hover {
     border-radius: .5rem;
     background: linear-gradient(315deg, rgba(46,0,78,0.5) 30%, rgba(125,0,180,0.5) 100%);
     cursor: pointer;
 }
 
-.icon-buy {
-    background-image: url(../images/shopping-cart-1.png);
-    background-size: 1.25rem;
-    background-repeat: no-repeat;
-    background-position: calc(0% + 20px) center;
+.products_whiteTheme li div:hover {
+    border-radius: .5rem;
+    background: linear-gradient(135deg, rgba(0,72,204,.5) 0%, rgba(0,63,180,.5) 30%, rgba(0,49,143,.5) 50%, rgba(0,40,116,.5) 70%, rgba(0,33,94,.5) 100%);
+    cursor: pointer;
+}
+
+.products li div img {
+    padding: 0 0 0 1rem;
+    width: 1.25rem;
+    background: transparent;
+}
+
+.products_whiteTheme li div img {
+    padding: 0 0 0 1rem;
+    width: 1.25rem;
+    background: transparent;
 }
 
 .img-offer{
     margin: auto;
     max-height: 10rem;
     max-width: 10rem;
-}
-
-.products {
-    display: grid;
-    grid-template-columns: 1fr;
-    list-style: none;
-    margin: 1rem;
-}
-
-.products li {
-    background: linear-gradient(135deg, rgba(46,0,78,0.5) 50%, rgba(125,0,180,0.5) 100%);
-    display: flex;
-    flex-direction: column;
-    padding: .8rem;
-    margin: 1rem;
-    border-radius: 8px;
-}
-
-.products :hover {
-    box-shadow: 10px 0px 15px 12px rgba(55, 43, 90, 0.2);
-}
-
-.products li :hover {
-    box-shadow: none;
 }
