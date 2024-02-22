@@ -4,7 +4,7 @@ var div = document.querySelector('button.div')
 var add = document.querySelector('button.add')
 var sub = document.querySelector('button.sub')
 
-var virgulaInserida = false 
+var insertComma = false 
 var mydisplay = 0
 var isAdd = 0
 var isSub = 0
@@ -17,7 +17,78 @@ var verify = false
 
 display.innerHTML = `0`
 
-function AC(){
+document.addEventListener('keypress', function(e) {
+
+    if(e.key === '0'){
+        var numberZero = document.querySelector('button.button-zero')
+        numberZero.click()
+    }
+    else if(e.key === ','){
+        var comma = document.querySelector('button.button-comma')
+        comma.click()
+    }
+    else if(e.key === `+`){
+        add.click()
+    }
+    else if(e.key === `-`){
+        sub.click()
+    }
+    else if(e.key === `*`){
+        mult.click()
+    }
+    else if(e.key === `/`){
+        div.click()
+    }
+    else if(e.key === 'Enter'){
+        var equality = document.querySelector('button.button-equality')
+        equality.click()
+    }
+    else if(e.key === '1'){
+        var numberOne = document.querySelector('button.button-one')
+        numberOne.click()
+    }
+    else if(e.key === '2'){
+        var numberTwo = document.querySelector('button.button-two')
+        numberTwo.click()
+    }
+    else if(e.key === '3'){
+        var numberThree = document.querySelector('button.button-three')
+        numberThree.click()
+    }
+    else if(e.key === '4'){
+        var numberFour = document.querySelector('button.button-four')
+        numberFour.click()
+    }
+    else if(e.key === '5'){
+        var numberFive = document.querySelector('button.button-five')
+        numberFive.click()
+    }
+    else if(e.key === '6'){
+        var numberSix = document.querySelector('button.button-six')
+        numberSix.click()
+    }
+    else if(e.key === '7'){
+        var numberSeven = document.querySelector('button.button-seven')
+        numberSeven.click()
+    }
+    else if(e.key === '8'){
+        var numberEight = document.querySelector('button.button-eight')
+        numberEight.click()
+    }
+    else if(e.key === '9'){
+        var numberNine = document.querySelector('button.button-nine')
+        numberNine.click()
+    }
+})
+
+document.addEventListener('keydown', function(e){
+    if(e.key === 'Backspace'){
+        var clean = document.querySelector('button.button-clean')
+        clean.click()
+    }
+})
+
+function clean(){
     
     mult.style.backgroundColor = 'Purple'
 
@@ -37,7 +108,7 @@ function AC(){
     isDivi = 0
     isPorcent = 0
     limit = []
-    virgulaInserida = false
+    insertComma = false
     verify = false
 
 }
@@ -54,12 +125,12 @@ function usernum(n){
         display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
     }
 
-    else if (virgulaInserida && limit.length < 13 && !verify) {
+    else if (insertComma && limit.length < 13 && !verify) {
         mydisplay += `.${n}`
         display.innerHTML += `${n}`
         verify = true
     }
-    else if (virgulaInserida && limit.length < 13 && verify) {
+    else if (insertComma && limit.length < 13 && verify) {
         mydisplay += `${n}`
         display.innerHTML += `${n}`
     }
@@ -74,16 +145,16 @@ function usernum(n){
 
 }
     
-function virgula(){
+function comma(){
 
-    if(!virgulaInserida){
+    if(!insertComma){
         display.innerHTML += `,`
-        virgulaInserida = true
+        insertComma = true
     }
 
 }
 
-function multiplicacao(){
+function multiply(){
 
     if (mydisplay != 0){
 
@@ -99,17 +170,17 @@ function multiplicacao(){
         isAdd = false
         isSub = false
         isPorcent = false
-        virgulaInserida = false
+        insertComma = false
         verify = false
         limit = []
-        igualdade()
+        equality()
         firstNumber = Number(mydisplay)
         mydisplay = 0
         isMult = true
     }
 }
 
-function divisao(){
+function division(){
 
     if (mydisplay != 0){
 
@@ -120,17 +191,17 @@ function divisao(){
     isMult = false
     isAdd = false
     isSub = false
-    virgulaInserida = false
+    insertComma = false
     verify = false
     limit = []
-    igualdade()
+    equality()
     firstNumber = Number(mydisplay)
     mydisplay = 0
     isDivi = true
 
 }
 
-function adicao(){
+function addition(){
 
     if (mydisplay != 0){
 
@@ -141,17 +212,17 @@ function adicao(){
     isSub = false
     isMult = false
     isDivi = false
-    virgulaInserida = false
+    insertComma = false
     verify = false
     limit = []
-    igualdade()
+    equality()
     firstNumber = Number(mydisplay)
     mydisplay = 0
     isAdd = true
 
 }
 
-function subtracao(){
+function subtraction(){
 
     if (mydisplay != 0){
 
@@ -162,17 +233,17 @@ function subtracao(){
     isAdd = false
     isMult = false
     isDivi = false
-    virgulaInserida = false
+    insertComma = false
     verify = false
     limit = []
-    igualdade()
+    equality()
     firstNumber = Number(mydisplay)
     mydisplay = 0
     isSub = true
 
 }
 
-function igualdade(){
+function equality(){
 
     if (isMult) {
         var resultMult = `${firstNumber * Number(mydisplay)}`
@@ -209,7 +280,7 @@ function igualdade(){
     
 }
 
-function sinal (){
+function signal(){
 
     if(mydisplay > 0){
         mydisplay = mydisplay - mydisplay*2
@@ -228,18 +299,18 @@ function sinal (){
 
 }
 
-function porcentagem(){
+function porcent(){
     isPorcent = false
     mydisplay = mydisplay/100
-    virgulaInserida = false
+    insertComma = false
     verify = false
     mydisplay = Number(mydisplay)
     display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
-    multiplicacao()
+    multiply()
     isPorcent = true
 }
 
-function igual(){
+function equal(){
 
     if (mydisplay != 0){
 

@@ -63,20 +63,20 @@ body {
     grid-column: span 4;
 }
 
-.inputs li.divisao button, li.multiplicacao button, li.divisao button, li.adicao button, li.subtracao button, li.igualdade button {
+.inputs li.division button, li.multiply button, li.division button, li.addition button, li.subtraction button, li.equality button {
     background-color: purple;
 }
 
-.inputs li.divisao button:hover, li.multiplicacao button:hover, li.divisao button:hover, li.adicao button:hover, li.subtracao button:hover, li.igualdade button:hover {
+.inputs li.division button:hover, li.multiply button:hover, li.division button:hover, li.addition button:hover, li.subtraction button:hover, li.equality button:hover {
     box-shadow: inset 10px 0px 15px 12px rgba(67, 1, 83, 0.356)
 }
 
-.inputs li.AC button, li.sinal button, li.porcentagem button{
+.inputs li.clean button, li.signal button, li.porcent button{
     color: black;
     background-color: #888;
 }
 
-.inputs li.AC button:hover, li.sinal button:hover, li.porcentagem button:hover {
+.inputs li.clean button:hover, li.signal button:hover, li.porcent button:hover {
     box-shadow: inset 10px 0px 15px 12px rgba(70, 64, 70, 0.356)
 }
 
