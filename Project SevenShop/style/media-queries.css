@@ -73,7 +73,7 @@
         display: flex;
         width: 2.8rem;
         height: 1.4rem;
-        background-color: #900;
+        background-color: rgb(94, 0, 170);
         border-radius: 1rem;
     }
     .toggle_button::after{
@@ -86,7 +86,7 @@
         border-radius: 100%;
     }
     .toggle:checked + .toggle_button::before{
-        background-color: green;
+        background-color: rgb(0, 132, 255);
     }
     .toggle:checked + .toggle_button::after{
         left: 1.6rem;
@@ -104,10 +104,10 @@
 @media screen and (min-width: 1490px) {
 
     .container {
-        margin: 1% 6rem 1rem 6rem;
+        margin: 1rem 6rem 1rem 6rem;
     }
     .container_whiteTheme {
-        margin: 1% 6rem 1rem 6rem;
+        margin: 1rem 6rem 1rem 6rem;
     }
     .title a{
         padding: 0;
@@ -136,5 +136,35 @@
     .products_whiteTheme{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .email-collect{
+        padding: .8rem 6rem .8rem 6rem;
+    }
+    .collect-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 5rem 0 5rem;
+    }
+    .desc h5{
+        margin: 0;
+    }
+    .collect-content form{
+        display: flex;
+        gap: 2rem;
+    }
+    .input-name, .input-email{
+        width: 25rem;
+        height: 3.1rem;
+    }
+    .input-submit{
+        width: 18rem;
+        height: 3.1rem;
+    }
+    #contacts {
+        padding: 2rem 6rem 2rem 6rem;
+    }
+    .contacts-list{
+        margin: 0 5rem 0 5rem;
     }
 }
