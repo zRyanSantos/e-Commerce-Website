@@ -18,8 +18,7 @@
     flex-direction: column;
     padding: .8rem;
     margin: 1rem;
-    border-radius: 8px;
-    max-width: 30rem;
+    border-radius: .5rem;
 }
 
 .products_whiteTheme li {
@@ -28,15 +27,15 @@
     flex-direction: column;
     padding: .8rem;
     margin: 1rem;
-    border-radius: 8px;
+    border-radius: .5rem;
 }
 
 .products :hover {
-    box-shadow: 10px 0px 15px 12px rgba(55, 43, 90, 0.2);
+    box-shadow: 0.625rem 0 1rem .75rem rgba(55, 43, 90, 0.2);
 }
 
 .products_whiteTheme :hover {
-    box-shadow: 10px 0px 15px 12px rgba(55, 43, 90, 0.2);
+    box-shadow: 0.625rem 0 1rem .75rem rgba(55, 43, 90, 0.2);
 }
 
 .products li :hover {
@@ -69,27 +68,27 @@
 }
 
 .products li h3 {
-    font-size: 22px;
+    font-size: 1.3rem;
     color: rgb(0, 183, 255);
     padding: 0;
     margin: 0;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
 }
 
 .products_whiteTheme li h3 {
-    font-size: 22px;
+    font-size: 1.3rem;
     color: rgb(255 155 0);
     padding: 0;
     margin: 0;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
 }
 
 .pay {
     margin: 0;
     padding: 0;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 .products li div {

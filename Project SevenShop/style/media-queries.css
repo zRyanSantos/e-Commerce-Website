@@ -19,6 +19,12 @@
         align-items: center;
         justify-content: space-between;
     }
+    .header-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15rem;
+    }
     .header_whiteTheme{
         display: flex;
         align-items: center;
@@ -29,7 +35,7 @@
     }
     .title a{
         padding: 0.625rem;
-        margin: 1rem;
+        margin-left: 1rem;
     }
     .search {
         display: grid;
@@ -42,7 +48,7 @@
         justify-content: center;
         grid-template-columns: 1fr 1fr;
         list-style: none;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: bold;
     }
     .menu-buttons li {
@@ -54,6 +60,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 2rem;
         margin-right: 1rem;
     }
     .toggle{
@@ -112,13 +119,13 @@
     .title a{
         padding: 0;
         font-size: 2.8rem;
-        margin: 5rem;
+        margin-left: 5rem;
     }
     .menu-buttons {
         display: grid;
         grid-template-columns: 1fr 1fr;
         list-style: none;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: bold;
     }
     .menu-buttons li {
@@ -158,6 +165,10 @@
         height: 3.1rem;
     }
     .input-submit{
+        width: 18rem;
+        height: 3.1rem;
+    }
+    .input-submit_whiteTheme {
         width: 18rem;
         height: 3.1rem;
     }
