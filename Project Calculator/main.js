@@ -6,87 +6,20 @@ var sub = document.querySelector('button.sub')
 
 var insertComma = false 
 var mydisplay = 0
-var isAdd = 0
-var isSub = 0
-var isMult = 0
-var isDivi = 0
+var isAdd = false
+var isSub = false
+var isMult = false
+var isDivi = false
 var firstNumber = 0
-var isPorcent = 0
+var isPorcent = false
 var limit = []
 var verify = false
+var subPressed = false
+var addPressed = false
+var multPressed = false
+var diviPressed = false
 
 display.innerHTML = `0`
-
-document.addEventListener('keypress', function(e) {
-
-    if(e.key === '0'){
-        var numberZero = document.querySelector('button.button-zero')
-        numberZero.click()
-    }
-    else if(e.key === ','){
-        var comma = document.querySelector('button.button-comma')
-        comma.click()
-    }
-    else if(e.key === `+`){
-        add.click()
-    }
-    else if(e.key === `-`){
-        sub.click()
-    }
-    else if(e.key === `*`){
-        mult.click()
-    }
-    else if(e.key === `/`){
-        div.click()
-    }
-    else if(e.key === 'Enter'){
-        var equality = document.querySelector('button.button-equality')
-        equality.click()
-    }
-    else if(e.key === '1'){
-        var numberOne = document.querySelector('button.button-one')
-        numberOne.click()
-    }
-    else if(e.key === '2'){
-        var numberTwo = document.querySelector('button.button-two')
-        numberTwo.click()
-    }
-    else if(e.key === '3'){
-        var numberThree = document.querySelector('button.button-three')
-        numberThree.click()
-    }
-    else if(e.key === '4'){
-        var numberFour = document.querySelector('button.button-four')
-        numberFour.click()
-    }
-    else if(e.key === '5'){
-        var numberFive = document.querySelector('button.button-five')
-        numberFive.click()
-    }
-    else if(e.key === '6'){
-        var numberSix = document.querySelector('button.button-six')
-        numberSix.click()
-    }
-    else if(e.key === '7'){
-        var numberSeven = document.querySelector('button.button-seven')
-        numberSeven.click()
-    }
-    else if(e.key === '8'){
-        var numberEight = document.querySelector('button.button-eight')
-        numberEight.click()
-    }
-    else if(e.key === '9'){
-        var numberNine = document.querySelector('button.button-nine')
-        numberNine.click()
-    }
-})
-
-document.addEventListener('keydown', function(e){
-    if(e.key === 'Backspace'){
-        var clean = document.querySelector('button.button-clean')
-        clean.click()
-    }
-})
 
 function clean(){
     
@@ -102,15 +35,18 @@ function clean(){
 
     mydisplay = 0
     firstNumber = 0
-    isAdd = 0
-    isSub = 0
-    isMult = 0
-    isDivi = 0
-    isPorcent = 0
+    isAdd = false
+    isSub = false
+    isMult = false
+    isDivi = false
+    isPorcent = false
     limit = []
     insertComma = false
     verify = false
-
+    subPressed = false
+    addPressed = false
+    multPressed = false
+    diviPressed = false
 }
 
 function usernum(n){
@@ -156,19 +92,55 @@ function comma(){
 
 function multiply(){
 
-    if (mydisplay != 0){
+    if (mydisplay !=0 && mydisplay !=NaN || isDivi || isAdd || isSub ){
 
     mult.style.backgroundColor = '#c900ff'
+    div.style.backgroundColor = 'Purple'
+    add.style.backgroundColor = 'Purple'
+    sub.style.backgroundColor = 'Purple'
 
     }
 
     if (isPorcent) {
         console.log('fodase')
     }
-    else {
+    else if(isDivi){
+        equality()
+        isSub = false
         isDivi = false
         isAdd = false
+        isMult = true
+        diviPressed = true
+        multiply()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(isAdd){
+        equality()
         isSub = false
+        isDivi = false
+        isAdd = false
+        isMult = true
+        addPressed = true
+        multiply()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(isSub){
+        equality()
+        isSub = false
+        isDivi = false
+        isAdd = false
+        isMult = true
+        subPressed = true
+        multiply()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(subPressed || addPressed || diviPressed){
+        mult.click()
+        subPressed = false
+        addPressed = false
+        diviPressed = false
+    }
+    else if (mydisplay !=0 && mydisplay !=NaN && !subPressed && !addPressed && !diviPressed){
         isPorcent = false
         insertComma = false
         verify = false
@@ -178,136 +150,270 @@ function multiply(){
         mydisplay = 0
         isMult = true
     }
-}
-
-function division(){
-
-    if (mydisplay != 0){
-
-    div.style.backgroundColor = '#c900ff'
-
+    else{
+        alert('Por favor digite um número!')
     }
-
-    isMult = false
-    isAdd = false
-    isSub = false
-    insertComma = false
-    verify = false
-    limit = []
-    equality()
-    firstNumber = Number(mydisplay)
-    mydisplay = 0
-    isDivi = true
-
+    
 }
 
 function addition(){
 
-    if (mydisplay != 0){
+    if (mydisplay !=0 && mydisplay !=NaN || isDivi || isMult || isSub){
 
     add.style.backgroundColor = '#c900ff'
+    div.style.backgroundColor = 'Purple'
+    mult.style.backgroundColor = 'Purple'
+    sub.style.backgroundColor = 'Purple'
 
     }
 
-    isSub = false
-    isMult = false
-    isDivi = false
-    insertComma = false
-    verify = false
-    limit = []
-    equality()
-    firstNumber = Number(mydisplay)
-    mydisplay = 0
-    isAdd = true
+    if(isDivi){
+        equality()
+        isMult = false
+        isSub = false
+        isDivi = false
+        isAdd = true
+        diviPressed = true
+        addition()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(isMult){
+        equality()
+        isMult = false
+        isSub = false
+        isDivi = false
+        isAdd = true
+        multPressed = true
+        addition()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(isSub){
+        equality()
+        isMult = false
+        isSub = false
+        isDivi = false
+        isAdd = true
+        subPressed = true
+        addition()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(subPressed || diviPressed || multPressed){
+        add.click()
+        subPressed = false
+        multPressed = false
+        diviPressed = false
+    }
+    else if (mydisplay !=0 && mydisplay !=NaN && !subPressed && !multPressed && !diviPressed){
+        insertComma = false
+        verify = false
+        limit = []
+        equality()
+        firstNumber = Number(mydisplay)
+        mydisplay = 0
+        isAdd = true
+    }
+    else{
+        alert('Por favor digite um número!')
+    }
+
+}
+
+function division(){
+
+    console.log(display)
+
+    if (mydisplay !=0 && mydisplay !=NaN || isAdd || isMult || isSub){
+
+    div.style.backgroundColor = '#c900ff'
+    add.style.backgroundColor = 'Purple'
+    mult.style.backgroundColor = 'Purple'
+    sub.style.backgroundColor = 'Purple'
+
+    }
+
+    if(isAdd){
+        equality()
+        isAdd = false
+        isMult = false
+        isSub = false
+        isDivi = true
+        addPressed = true
+        division()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(isMult){
+        equality()
+        isAdd = false
+        isMult = false
+        isSub = false
+        isDivi = true
+        multPressed = true
+        division()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(isSub){
+        equality()
+        isAdd = false
+        isMult = false
+        isSub = false
+        isDivi = true
+        subPressed = true
+        division()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(subPressed || addPressed || multPressed){
+        div.click()
+        subPressed = false
+        addPressed = false
+        multPressed = false
+    }
+    else if (mydisplay !=0 && mydisplay !=NaN && !subPressed && !addPressed && !multPressed){
+        insertComma = false
+        verify = false
+        limit = []
+        equality()
+        firstNumber = Number(mydisplay)
+        mydisplay = 0
+        isDivi = true
+    }
+    else{
+        alert('Por favor digite um número!')
+    }
 
 }
 
 function subtraction(){
 
-    if (mydisplay != 0){
+    if (mydisplay !=0 && mydisplay !=NaN || isAdd || isDivi || isMult){
 
     sub.style.backgroundColor = '#c900ff'
+    add.style.backgroundColor = 'Purple'
+    mult.style.backgroundColor = 'Purple'
+    div.style.backgroundColor = 'Purple'
 
     }
 
-    isAdd = false
-    isMult = false
-    isDivi = false
-    insertComma = false
-    verify = false
-    limit = []
-    equality()
-    firstNumber = Number(mydisplay)
-    mydisplay = 0
-    isSub = true
+    if(isAdd){
+        equality()
+        isAdd = false
+        isMult = false
+        isDivi = false
+        isSub = true
+        addPressed = true
+        subtraction()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(isDivi){
+        equality()
+        isAdd = false
+        isMult = false
+        isDivi = false
+        isSub = true
+        diviPressed = true
+        subtraction()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(isMult){
+        equality()
+        isAdd = false
+        isMult = false
+        isDivi = false
+        isSub = true
+        multPressed = true
+        subtraction()
+        return firstNumber = mydisplay, mydisplay = 0
+    }
+    else if(addPressed || diviPressed || multPressed){
+        sub.click()
+        diviPressed = false
+        addPressed = false
+        multPressed = false
+    }
+    else if (mydisplay !=0 && mydisplay !=NaN && !addPressed && !diviPressed && !multPressed){
+        insertComma = false
+        verify = false
+        limit = []
+        equality()
+        firstNumber = Number(mydisplay)
+        mydisplay = 0
+        isSub = true
+    }
+    else{
+        alert('Por favor digite um número!')
+    }
 
 }
 
 function equality(){
 
     if (isMult) {
-        var resultMult = `${firstNumber * Number(mydisplay)}`
+        mydisplay = firstNumber * mydisplay
+ 
+        mydisplay = Number(mydisplay)
 
-        resultMult = Number(resultMult)
-
-        display.innerHTML = `${resultMult.toLocaleString('pt-BR')}`
-        mydisplay = `${firstNumber * Number(mydisplay)}`
+        display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
     }
     else if (isDivi) {
-        var resultDivi = `${firstNumber / Number(mydisplay)}`
+        mydisplay = firstNumber / mydisplay
 
-        resultDivi = Number(resultDivi)
+        mydisplay = Number(mydisplay)
 
-        display.innerHTML = `${resultDivi.toLocaleString('pt-BR')}`
-        mydisplay = `${firstNumber / Number(mydisplay)}`
+        display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
     }
     else if (isAdd) {
-        var resultAdd = `${firstNumber + Number(mydisplay)}`
+        mydisplay = firstNumber + mydisplay
 
-        resultAdd = Number(resultAdd)
+        mydisplay = Number(mydisplay)
 
-        display.innerHTML = `${resultAdd.toLocaleString('pt-BR')}`
-        mydisplay = `${firstNumber + Number(mydisplay)}`
+        display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
     }
     else if (isSub) {
-        resultSub = `${firstNumber - Number(mydisplay)}`
+        mydisplay = firstNumber - mydisplay
 
-        resultSub = Number(resultSub)
+        mydisplay = Number(mydisplay)
 
-        display.innerHTML = `${resultSub.toLocaleString('pt-BR')}`
-        mydisplay = `${firstNumber - Number(mydisplay)}`
+        display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
     }
     
 }
 
 function signal(){
 
-    if(mydisplay > 0){
+    if(mydisplay > 0 && mydisplay !=0 && mydisplay !=NaN){
         mydisplay = mydisplay - mydisplay*2
 
         mydisplay = Number(mydisplay)
 
         display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
     }
-    else if (mydisplay < 0){
+    else if (mydisplay < 0 && mydisplay !=0 && mydisplay !=NaN){
         mydisplay = mydisplay - (mydisplay*2)
 
         mydisplay = Number(mydisplay)
 
         display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
     }
+    else{
+        alert('Por favor digite um número!')
+    }
 
 }
 
 function porcent(){
-    isPorcent = false
-    mydisplay = mydisplay/100
-    insertComma = false
-    verify = false
-    mydisplay = Number(mydisplay)
-    display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
-    multiply()
-    isPorcent = true
+
+    if(mydisplay !=0 && mydisplay !=NaN){
+        isPorcent = false
+        mydisplay = mydisplay/100
+        insertComma = false
+        verify = false
+        mydisplay = Number(mydisplay)
+        display.innerHTML = `${mydisplay.toLocaleString('pt-BR')}`
+        multiply()
+        isPorcent = true
+    }
+    else{
+        alert('Por favor digite um número!')
+    }
 }
 
 function equal(){
