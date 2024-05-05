@@ -192,7 +192,7 @@ footer {
 .answers-content {
     display: flex;
     flex-direction: column;
-    gap: .2rem;
+    gap: .5rem;
 }
 
 .answers-content input {
