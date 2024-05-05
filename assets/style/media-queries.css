@@ -144,30 +144,29 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
-    .email-collect{
-        padding: .8rem 6rem .8rem 6rem;
-    }
-    .collect-content{
+
+    .email-collect, .collect-content, .collect-answers, .answers-content {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        margin: 0 5rem 0 5rem;
     }
-    .desc h5{
-        margin: 0;
+
+    .collect-title h5 {
+        text-align: left;
     }
-    .collect-content form{
-        display: flex;
-        gap: 2rem;
+
+    .email-collect {
+        gap: 0;
+        padding: .5rem 11.5rem .5rem 11.5rem;
     }
-    .input-name, .input-email{
-        width: 25rem;
-        height: 3.1rem;
+
+    .collect-answers {
+        margin: auto;
     }
-    .input-submit{
-        width: 18rem;
-        height: 3.1rem;
+
+    .answers-content {
+        gap: 1rem;
     }
+    
     .input-submit_whiteTheme {
         width: 18rem;
         height: 3.1rem;
