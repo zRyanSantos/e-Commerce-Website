@@ -11,22 +11,22 @@
 
 @media screen and (min-width: 1420px) {
 
-    .container{
+    .main_container{
         margin: 2rem;
     }
-    .header {
+    .main_header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin: 2rem 2rem 0 2rem;
     }
-    .header-content {
+    .main_header-content {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 15rem;
     }
-    .header_whiteTheme{
+    .main_header_whiteTheme{
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -162,10 +162,10 @@
 
 @media screen and (min-width: 1640px) {
 
-    .container {
+    .main_container {
         margin: 1rem 6rem 1rem 6rem;
     }
-    .container_whiteTheme {
+    .main_container_whiteTheme {
         margin: 1rem 6rem 1rem 6rem;
     }
     .title a{

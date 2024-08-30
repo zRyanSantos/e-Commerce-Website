@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    background-image: url(../images/pexels-esan-2085998.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.content{
+    background: linear-gradient(135deg, rgba(15,12,41,.7) 0%, rgba(48,43,99,.7) 50%, rgba(36,36,62,.7) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+.content h1{
+    color: white;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    gap: 1rem;
+}
+
+.login-main{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.login-desc{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.login-senha, .login-email, .login-submit{
+    display: flex;
+    color: rgb(0, 204, 255);
+    align-items: left;
+    flex-direction: column;
+    font-weight: bold;
+    border: none;
+    gap: .3rem;
+}
+
+.input-email, .input-password, .input-submit{
+    background: linear-gradient(135deg, rgba(15,12,41,.6) 0%, rgba(48,43,99,.6) 50%, rgba(36,36,62,.6) 100%);
+    height: 2rem;
+    color: white;
+    font-weight: bold;
+    padding: .5rem;
+    border-radius: .3rem;   
+    border: none;
+}
+
+.input-email:focus-visible, .input-password:focus-visible {
+    outline: none;
+}
+
+.other-helps{
+    display: flex;
+    color: rgb(0, 204, 255);
+    align-items: left;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.other-helps a{
+    text-decoration: none;
+    color: rgb(0, 204, 255);
+}
+
+.login-remember{
+    display: flex;
+    flex-direction: row;
+    gap: .2rem;
+}
+
+.register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 204, 255);
+    gap: .2rem;
+}
+
+.register-content a{
+    text-decoration: none;
+    color: white;
+}
+
+.input-submit{
+    background: linear-gradient(135deg, rgba(15,12,41,1) 0%, rgba(48,43,99,1) 50%, rgba(36,36,62,1) 100%);
+    height: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+.input-submit:hover{
+    background: linear-gradient(135deg,rgba(36,36,62,1) 0%, rgba(48,43,99,1) 50%, rgba(15,12,41,1) 100%);
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder { 
+    color: white;
+    font-weight: bold;
+}
+
+
