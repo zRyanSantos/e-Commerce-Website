@@ -1,0 +1,46 @@
+@media screen and (min-width: 37px) {
+    .content{
+        max-width: 15rem;
+    }
+    
+    .cadaster-main{
+        max-width: 15rem;
+    }
+
+    .cadaster{
+        max-width: 15rem;
+    }
+
+    .cadaster-senha, .cadaster-email, .cadaster-submit{
+        max-width: 15rem;
+    }
+
+    .login-content{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 636px) {
+    body{
+        background-image: url(../images/pexels-lulizler-3165335.jpg);
+    }
+    .content{
+        max-width: none;
+    }
+    
+    .cadaster-main{
+        max-width: none;
+    }
+
+    .cadaster{
+        max-width: none;
+    }
+
+    .cadaster-senha, .cadaster-email, .cadaster-submit{
+        max-width: none;
+    }
+
+    .login-content{
+        flex-direction: row;
+    }
+}

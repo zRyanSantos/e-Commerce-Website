@@ -1,0 +1,47 @@
+@media screen and (min-width: 37px) {
+    .content{
+        max-width: 15rem;
+    }
+    
+    .login-main{
+        max-width: 15rem;
+    }
+
+    .login{
+        max-width: 15rem;
+        gap: 1.5rem;
+    }
+
+    .login-senha, .login-email, .login-submit{
+        max-width: 15rem;
+    }
+
+    .cadaster-content{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 636px) {
+    body{
+        background-image: url(../images/pexels-lulizler-3165335.jpg);
+    }
+    .content{
+        max-width: none;
+    }
+    
+    .login-main{
+        max-width: none;
+    }
+
+    .login{
+        max-width: none;
+    }
+
+    .login-senha, .login-email, .login-submit{
+        max-width: none;
+    }
+
+    .cadaster-content{
+        flex-direction: row;
+    }
+}

@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Poppins, sans-serif;
-    background-image: url(../images/pexels-lulizler-3165335.jpg);
+    background-image: url(../images/pexels-pramodtiwari-15919234.jpg);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     backdrop-filter: blur(.3rem);
@@ -82,7 +82,7 @@ body {
     color: rgb(0, 204, 255);
     align-items: left;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .other-helps a{
@@ -110,7 +110,6 @@ body {
 
 .cadaster-content{
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     color: rgb(0, 204, 255);
@@ -120,6 +119,10 @@ body {
 .cadaster-content a{
     text-decoration: none;
     color: white;
+}
+
+.cadaster-content a:hover{
+    color: rgb(119, 0, 255);
 }
 
 .input-login-submit{
