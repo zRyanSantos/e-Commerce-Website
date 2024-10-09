@@ -45,7 +45,7 @@ submitcadastro.addEventListener('click', function(event){
 
             alert('Cadastro realizado com sucesso!');
 
-            window.location.href = "/e-Commerce Website/login.html";
+            window.location.href = "/e-Commerce Website/index.html";
         }
     } else {
         alert('Por favor, preencha ambos os campos antes de enviá-los.');
