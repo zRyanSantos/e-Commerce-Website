@@ -43,7 +43,7 @@ submitcadastro.addEventListener('click', function(event){
 
             localStorage.setItem('usuarios', JSON.stringify(usuarios))
 
-            alert('Cadastro realizado com sucesso!');
+            alert('Cadastro realizado com sucesso, Agora basta efetuar login e acessar nosso site!');
 
             window.location.href = "../index.html";
         }
