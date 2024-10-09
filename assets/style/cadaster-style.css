@@ -35,20 +35,20 @@ body {
     color: white;
 }
 
-.login{
+.cadaster{
     display: flex;
     flex-direction: column;
     width: 25rem;
-    gap: 1rem;
+    gap: .3rem;
 }
 
-.login-main{
+.cadaster-main{
     display: flex;
     flex-direction: column;
     gap: .3rem;
 }
 
-.login-senha, .login-email, .login-submit{
+.cadaster-senha, .cadaster-email, .cadaster-submit{
     display: flex;
     color: rgb(0, 204, 255);
     align-items: left;
@@ -58,7 +58,7 @@ body {
     gap: .3rem;
 }
 
-.input-login-email, .input-login-password, .input-login-submit{
+.input-cadaster-email, .input-cadaster-password, .input-cadaster-submit{
     background-color: rgba(15,12,41,.6);
     height: 2rem;
     color: white;
@@ -68,47 +68,28 @@ body {
     border: none;
 }
 
-.input-login-email:hover, .input-login-password:hover{
+.input-cadaster-email:hover, .input-cadaster-password:hover{
     background: linear-gradient(135deg, rgba(15,12,41,1) 0%, rgb(55, 3, 114) 50%, rgba(15,12,41,1) 100%);
     border: none;
 }
 
-.input-login-email:focus-visible, .input-login-password:focus-visible {
+.input-cadaster-email:focus-visible, .input-cadaster-password:focus-visible {
     outline: none;
 }
 
-.other-helps{
-    display: flex;
-    color: rgb(0, 204, 255);
-    align-items: left;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.other-helps a{
-    text-decoration: none;
-    color: rgb(0, 204, 255);
-}
-
-.login-remember{
-    display: flex;
-    flex-direction: row;
-    gap: .2rem;
-}
-
-.cadaster-desc{
+.login-desc{
     display: flex;
     flex-direction: column;
     gap: .3rem;
 }
 
-.cadaster{
+.login{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.cadaster-content{
+.login-content{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -117,18 +98,18 @@ body {
     gap: .2rem;
 }
 
-.cadaster-content a{
+.login-content a{
     text-decoration: none;
     color: white;
 }
 
-.input-login-submit{
+.input-cadaster-submit{
     height: 3rem;
     color: white;
     font-weight: bold;
 }
 
-.input-login-submit:hover{
+.input-cadaster-submit:hover{
     background: linear-gradient(135deg, rgba(15,12,41,1) 0%, rgb(55, 3, 114) 50%, rgba(15,12,41,1) 100%);
     cursor: pointer;
 }

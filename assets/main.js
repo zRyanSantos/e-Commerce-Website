@@ -1,23 +1,19 @@
-var body = document.body
-var button = document.querySelector('input.toggle')
-var container = document.querySelector('section.main_container')
-var header = document.querySelector('header.main_header')
-var products = document.querySelector('ol.products')
+// --------------------------------- DECLARANDO OS ELEMENTOS -------------------------------------- //
+
+var userName = document.querySelector('input.input-name')
+var email = document.querySelector('input.input-email')
 var submit = document.querySelector('button.input-submit')
 
-button.addEventListener("click", function(){
-    if(button.checked){
-        body.classList = 'body_whiteTheme'
-        container.classList = 'main_container_whiteTheme'
-        header.classList = 'main_header_whiteTheme'
-        products.classList = 'products_whiteTheme'
-        submit.classList = 'input-submit_whiteTheme'
+// --------------------------------------- FUNÇÃO PRINCIPAL --------------------------------------- //
+
+submit.addEventListener('click', function(){
+    
+    if(userName.value === `` || email.value === ``){
+        alert(`Por favor, preencha os campos antes de envia-los. `)
     }
     else{
-        body.classList = 'body'
-        container.classList = 'main_container'
-        header.classList = 'main_header'
-        products.classList = 'products'
-        submit.classList = 'input-submit'
+    alert(`Parabéns ${userName.value}!\nSeu email: ${email.value} foi cadastrado com sucesso!\nCaso os dados estejam incorretos, envie-os novamente.`)
     }
 })
+
+// ------------------------------------------------------------------------------------------------ //
