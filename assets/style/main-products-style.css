@@ -13,7 +13,7 @@
 }
 
 .products li {
-    background: linear-gradient(135deg, rgba(46,0,78,0.5) 50%, rgba(125,0,180,0.5) 100%);
+    background-color: rgba(46,0,78,0.5);
     display: flex;
     flex-direction: column;
     padding: .8rem;
@@ -31,11 +31,11 @@
 }
 
 .products :hover {
-    box-shadow: 0.625rem 0 1rem .75rem rgba(55, 43, 90, 0.2);
+    box-shadow: 10px 0px 15px 15px rgba(89, 0, 161, 0.5);
 }
 
 .products_whiteTheme :hover {
-    box-shadow: 0.625rem 0 1rem .75rem rgba(55, 43, 90, 0.2);
+    box-shadow: 10px 0px 15px 15px rgba(0, 0, 0, 0.2);
 }
 
 .products li :hover {
@@ -94,7 +94,7 @@
 .products li div {
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, rgba(46,0,78,0.5) 30%, rgba(125,0,180,0.5) 100%);
+    background-color: rgba(109, 0, 156, 0.5);
     border-radius: .5rem;
     text-align: center;
 }
@@ -113,6 +113,17 @@
 
 .buy {
     margin: auto;
+    font-family: Poppins, sans-serif;
+    font-size: .938rem;
+    height: 3.125rem; 
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+}
+
+.products li button {
+    margin: auto;
+    padding: 0 1rem 0 0rem;
     font-family: Poppins, sans-serif;
     font-size: .938rem;
     height: 3.125rem; 
@@ -159,6 +170,7 @@
 }
 
 .products li div img {
+    padding: 0 0 0 1rem;
     width: 1.25rem;
     background: transparent;
 }

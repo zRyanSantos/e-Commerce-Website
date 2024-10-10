@@ -90,6 +90,11 @@ body {
     color: rgb(0, 204, 255);
 }
 
+.other-helps a:hover{
+    text-decoration: underline;
+    color: rgb(0, 255, 200);
+}
+
 .login-remember{
     display: flex;
     flex-direction: row;
@@ -122,7 +127,8 @@ body {
 }
 
 .cadaster-content a:hover{
-    color: rgb(119, 0, 255);
+    text-decoration: underline;
+    color: rgb(0, 255, 200);
 }
 
 .input-login-submit{
