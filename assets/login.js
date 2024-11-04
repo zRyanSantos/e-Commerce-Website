@@ -17,7 +17,7 @@ submitlogin.addEventListener('click', function(event){
         });
 
         if (usuarioValido) {
-            window.location.href = "../main.html";
+            window.location.href = "main.html";
         } else {
             alert('Dados incorretos ou não cadastrados!');
         }

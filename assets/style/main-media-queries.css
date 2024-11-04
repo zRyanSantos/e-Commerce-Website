@@ -118,7 +118,8 @@
 
     .products_whiteTheme{
         display: grid;
-        margin: 1rem;
+        /* margin: 1rem; */
+        margin-top: 0;
         grid-template-columns: 1fr 1fr 1fr;
     }
 

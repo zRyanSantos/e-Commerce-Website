@@ -48,7 +48,7 @@ body {
     gap: .3rem;
 }
 
-.cadaster-senha, .cadaster-email, .cadaster-submit{
+.cadaster-senha, .cadaster-email, .cadaster-submit, .cadaster-confirm-senha{
     display: flex;
     color: rgb(0, 204, 255);
     align-items: left;
@@ -58,7 +58,7 @@ body {
     gap: .3rem;
 }
 
-.input-cadaster-email, .input-cadaster-password, .input-cadaster-submit{
+.input-cadaster-email, .input-cadaster-password, .input-cadaster-submit, .input-confirm-password{
     background-color: rgba(15,12,41,.6);
     height: 2rem;
     color: white;
@@ -68,7 +68,7 @@ body {
     border: none;
 }
 
-.input-cadaster-email:hover, .input-cadaster-password:hover{
+.input-cadaster-email:hover, .input-cadaster-password:hover, .input-confirm-password:hover{
     background: linear-gradient(135deg, rgba(15,12,41,1) 0%, rgb(55, 3, 114) 50%, rgba(15,12,41,1) 100%);
     border: none;
 }
